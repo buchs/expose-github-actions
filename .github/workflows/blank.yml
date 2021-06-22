@@ -27,18 +27,21 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          echo "PATH:"
-          echo "$PATH"|tr ':' '\n'
-          echo -e '\n/usr/bin:'
-          ls /usr/bin/
-          echo  -e '\n/usr/local/bin:'
-          ls /usr/local/bin
-          echo -e '\ntype python:'
-          type python
-          echo -e '\ntype python3:'
-          type python3
-          echo -e '\ntype python3.9:'
-          type python3.9
+          #echo "PATH:"
+          #echo "$PATH"|tr ':' '\n'
+          #echo -e '\n/usr/bin:'
+          #ls /usr/bin/
+          #echo  -e '\n/usr/local/bin:'
+          #ls /usr/local/bin
+          #echo -e '\ntype python:'
+          #type python
+          #echo -e '\ntype python3:'
+          #type python3
           echo -e '\ntype pip3:'
           type pip3
-          
+          echo -e '\n/opt/pipx_bin:'
+          ls /opt/pipx_bin
+          echo -e '\n/opt:'
+          ls /opt
+          echo -e '\npython3 --version:'
+          python3 --version
