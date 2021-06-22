@@ -27,6 +27,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
+          # explore the runner environment...
           #echo "PATH:"
           #echo "$PATH"|tr ':' '\n'
           #echo -e '\n/usr/bin:'
@@ -48,9 +49,17 @@ jobs:
 
           # find / -name python 2>/dev/null
           
-          echo -e '\n/opt/hostedtoolcache/Python/3.9.5/x64/:'
-          find /opt/hostedtoolcache/Python/3.9.5/x64/ -type d 
+          # echo -e '\n/opt/hostedtoolcache/Python/3.9.5/x64/:'
+          # find /opt/hostedtoolcache/Python/3.9.5/x64/ -type d 
 
-          echo -e '\n/opt/hostedtoolcache/Python/3.9.5/x64/bin:'
-          ls /opt/hostedtoolcache/Python/3.9.5/x64/bin
+          # echo -e '\n/opt/hostedtoolcache/Python/3.9.5/x64/bin:'
+          # ls /opt/hostedtoolcache/Python/3.9.5/x64/bin
+          
+          # find Python3.9 and pip3.9 here:
+          PATH="/opt/hostedtoolcache/Python/3.9.5/x64/bin:$PATH"
+          python3.9 --version
+          pip3.9 install awscli
+          pip3.9 install awsebcli
+          aws help
+          eb help
           
