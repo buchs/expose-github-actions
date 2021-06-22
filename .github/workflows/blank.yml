@@ -46,6 +46,11 @@ jobs:
           # echo -e '\npython3 --version:'
           # python3 --version
 
-          find / -name python 2>/dev/null
-          find / -name 'python3*' 2>/dev/null
+          # find / -name python 2>/dev/null
+          
+          echo -e '\n/opt/hostedtoolcache/Python/3.9.5/x64/:'
+          find /opt/hostedtoolcache/Python/3.9.5/x64/ -type d 
+
+          echo -e '\n/opt/hostedtoolcache/Python/3.9.5/x64/bin:'
+          ls /opt/hostedtoolcache/Python/3.9.5/x64/bin
           
